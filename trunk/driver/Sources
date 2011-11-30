@@ -1,0 +1,22 @@
+!include ../options.mak
+
+DRIVERTARGETNAME=driver
+
+TARGETNAME=$(DRIVERTARGETNAME)
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+
+INCLUDES=$(INCLUDES) ..\driverThunks
+
+LINKER_FLAGS=$(LINKER_FLAGS) /INTEGRITYCHECK 
+
+TARGETLIBS= $(TARGETLIBS) \
+			../driverThunks/objchk_win7_x86/i386/driverThunks.lib \
+			$(DDK_LIB_PATH)\ntstrsafe.lib \
+			$(DDK_LIB_PATH)\rtlver.lib \
+                        $(IFSKIT_LIB_PATH)\fltMgr.lib
+
+SOURCES= \
+         Main.cpp 
+
+
