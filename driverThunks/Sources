@@ -1,0 +1,8 @@
+!include ../options.mak
+
+TARGETNAME=driverThunks
+TARGETTYPE=LIBRARY
+
+SOURCES= \
+    driverInit.cpp 
+
