@@ -1,0 +1,9 @@
+Add signcode_cmd to your environment and point it to the sign.cmd file
+SIGNCODE_CMD=C:\...\windows-filter-driver\buildFiles\Sign.cmd
+
+For ddkbuild add W7BASE=path to your winddk e.g.
+W7BASE=C:\WinDDK\7600.16385.1
+
+Make a test cert:
+makecert -r -pe -ss PrivateCertStore -n "CN=driver(Test)" driver.cer
+signtool sign /v /s PrivateCertStore /n driver(Test) /t http://timestamp.verisign.com/scripts/timstamp.dll objchk_win7_x86/i386/driver.sys
