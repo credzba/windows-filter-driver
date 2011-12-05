@@ -1,2 +1,3 @@
-DIRS=	driverThunks \
+DIRS=	utils \
+        driverThunks \
         driver
