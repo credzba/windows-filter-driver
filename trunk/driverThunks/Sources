@@ -3,6 +3,8 @@
 TARGETNAME=driverThunks
 TARGETTYPE=LIBRARY
 
+INCLUDES=$(INCLUDES) ..\Utils;
+
 SOURCES= \
     driverInit.cpp 
 

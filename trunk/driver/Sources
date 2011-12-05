@@ -6,12 +6,13 @@ TARGETNAME=$(DRIVERTARGETNAME)
 TARGETTYPE=DRIVER
 DRIVERTYPE=FS
 
-INCLUDES=$(INCLUDES) ..\driverThunks
+INCLUDES=$(INCLUDES) ..\driverThunks; ..\Utils; 
 
 LINKER_FLAGS=$(LINKER_FLAGS) /INTEGRITYCHECK 
 
 TARGETLIBS= $(TARGETLIBS) \
 			../driverThunks/$O/driverThunks.lib \
+			../Utils/$O/Utils.lib \
 			$(DDK_LIB_PATH)\ntstrsafe.lib \
 			$(DDK_LIB_PATH)\rtlver.lib \
                         $(IFSKIT_LIB_PATH)\fltMgr.lib

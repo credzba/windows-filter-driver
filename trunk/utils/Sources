@@ -1,0 +1,8 @@
+!include ../options.mak
+
+TARGETNAME=utils
+TARGETTYPE=LIBRARY
+
+SOURCES= \
+    OsPrint.cpp
+
